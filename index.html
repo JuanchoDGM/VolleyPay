@@ -4,25 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Control de Pagos - Academia de Voleibol</title>
-  <link rel="stylesheet" href="./src/output.css">
-  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/7813/7813367.png">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body class="bg-gradient-to-tr from-blue-50 to-indigo-100 min-h-screen text-gray-800">
-  <div class="max-w-6xl mx-auto py-10 px-6">
-    <div class="flex items-center justify-center gap-4 mb-8">
+  <div class="max-w-6xl mx-auto py-10 px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-center sm:text-left">
       <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" alt="Vóley Logo" class="w-12 h-12">
-      <!-- <img src="https://cdn-icons-png.flaticon.com/128/7813/7813367.png" alt="Vóley Logo" class="w-12 h-12"> -->
-      <h1 class="text-4xl font-extrabold text-indigo-700">Control de Pagos Voleibol</h1>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-700">Control de Pagos - Academia de Voleibol</h1>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow-md mb-8">
-      <div class="flex gap-4 items-center">
-        <input id="studentName" type="text" placeholder="Nombre de la alumna" class="flex-1 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400">
-        <button id="addButton" class="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700">
+    <div class="bg-white p-4 sm:p-6 rounded-xl shadow-md mb-8">
+      <div class="flex flex-col sm:flex-row gap-4 items-center">
+        <input id="studentName" type="text" placeholder="Nombre de la alumna" class="w-full sm:flex-1 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        <button id="addButton" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700">
           <i class="ph ph-user-plus"></i> Agregar
         </button>
-        <button id="resetButton" class="flex items-center gap-2 bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600">
+        <button id="resetButton" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-yellow-500 text-white px-4 py-2 rounded-xl hover:bg-yellow-600">
           <i class="ph ph-arrow-counter-clockwise"></i> Nuevo Ciclo
         </button>
       </div>
@@ -32,13 +30,13 @@
       <table class="min-w-full bg-white rounded-xl shadow-md text-sm">
         <thead class="bg-indigo-200 text-indigo-900">
           <tr>
-            <th class="p-3 text-left">Nombre</th>
-            <th class="p-3 text-center">Semana 1</th>
-            <th class="p-3 text-center">Semana 2</th>
-            <th class="p-3 text-center">Semana 3</th>
-            <th class="p-3 text-center">Semana 4</th>
-            <th class="p-3 text-center">Pago Mensual</th>
-            <th class="p-3 text-center">Acciones</th>
+            <th class="p-3 text-left whitespace-nowrap">Nombre</th>
+            <th class="p-3 text-center whitespace-nowrap">Semana 1</th>
+            <th class="p-3 text-center whitespace-nowrap">Semana 2</th>
+            <th class="p-3 text-center whitespace-nowrap">Semana 3</th>
+            <th class="p-3 text-center whitespace-nowrap">Semana 4</th>
+            <th class="p-3 text-center whitespace-nowrap">Pago Mensual</th>
+            <th class="p-3 text-center whitespace-nowrap">Acciones</th>
           </tr>
         </thead>
         <tbody id="studentsTable" class="divide-y divide-gray-200"></tbody>

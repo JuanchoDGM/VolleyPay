@@ -12,7 +12,7 @@ let students = JSON.parse(localStorage.getItem('students')) || [];
         const checkDisabled = student.monthlyPaid ? 'disabled' : '';
 
         row.innerHTML = `
-          <td class="p-3 font-medium text-gray-700">${student.name}</td>
+          <td class="p-3 font-medium text-gray-700 whitespace-nowrap">${student.name}</td>
           ${student.weeks.map((paid, i) => `
             <td class="text-center">
               <input type="checkbox" class="week-checkbox accent-indigo-600" data-index="${index}" data-week="${i}" ${checkDisabled} ${paid ? 'checked' : ''}>
